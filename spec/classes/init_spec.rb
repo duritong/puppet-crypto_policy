@@ -24,7 +24,7 @@ describe 'crypto_policy', :type => 'class' do
 
     context 'with policy level future' do
       let(:params) {{
-        :policy => 'future',
+        :level => 'future',
       }}
 
       it { should compile.with_all_deps }
