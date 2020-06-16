@@ -1,0 +1,389 @@
+---
+aio_agent_version: 6.12.0
+augeas:
+  version: 1.12.0
+disks:
+  vda:
+    size: 10.00 GiB
+    size_bytes: 10737418240
+    vendor: 6900
+  vdb:
+    size: 10.00 GiB
+    size_bytes: 10737418240
+    vendor: 6900
+dmi:
+  bios:
+    release_date: 01/01/2011
+    vendor: Seabios
+    version: 0.5.1
+  chassis:
+    type: Other
+  manufacturer: Red Hat
+  product:
+    name: KVM
+    uuid: C7AC4451-F32C-4376-85B0-81916BCC0CDC
+facterversion: 3.14.7
+filesystems: ext2,ext3,ext4,xfs
+fips_enabled: false
+identity:
+  gid: 0
+  group: root
+  privileged: true
+  uid: 0
+  user: root
+is_pe: false
+is_virtual: false
+kernel: Linux
+kernelmajversion: '4.18'
+kernelrelease: 4.18.0-147.3.1.el8_1.x86_64
+kernelversion: 4.18.0
+load_averages:
+  15m: 0.01
+  1m: 0.01
+  5m: 0.01
+memory:
+  system:
+    available: 1.25 GiB
+    available_bytes: 1340055552
+    capacity: 66.27%
+    total: 3.70 GiB
+    total_bytes: 3973459968
+    used: 2.45 GiB
+    used_bytes: 2633404416
+mountpoints:
+  "/":
+    available: 2.55 GiB
+    available_bytes: 2741145600
+    capacity: 36.02%
+    device: "/dev/mapper/VG01-ROOT"
+    filesystem: xfs
+    options:
+    - rw
+    - seclabel
+    - relatime
+    - attr2
+    - inode64
+    - noquota
+    size: 3.99 GiB
+    size_bytes: 4284481536
+    used: 1.44 GiB
+    used_bytes: 1543335936
+  "/boot":
+    available: 304.34 MiB
+    available_bytes: 319123456
+    capacity: 32.68%
+    device: "/dev/vda1"
+    filesystem: ext4
+    options:
+    - rw
+    - seclabel
+    - relatime
+    - data=ordered
+    size: 487.95 MiB
+    size_bytes: 511647744
+    used: 147.77 MiB
+    used_bytes: 154947584
+  "/dev":
+    available: 1.84 GiB
+    available_bytes: 1974685696
+    capacity: 0%
+    device: devtmpfs
+    filesystem: devtmpfs
+    options:
+    - rw
+    - seclabel
+    - nosuid
+    - size=1928404k
+    - nr_inodes=482101
+    - mode=755
+    size: 1.84 GiB
+    size_bytes: 1974685696
+    used: 0 bytes
+    used_bytes: 0
+  "/dev/hugepages":
+    available: 0 bytes
+    available_bytes: 0
+    capacity: 100%
+    device: hugetlbfs
+    filesystem: hugetlbfs
+    options:
+    - rw
+    - seclabel
+    - relatime
+    size: 0 bytes
+    size_bytes: 0
+    used: 0 bytes
+    used_bytes: 0
+  "/dev/mqueue":
+    available: 0 bytes
+    available_bytes: 0
+    capacity: 100%
+    device: mqueue
+    filesystem: mqueue
+    options:
+    - rw
+    - seclabel
+    - relatime
+    size: 0 bytes
+    size_bytes: 0
+    used: 0 bytes
+    used_bytes: 0
+  "/dev/pts":
+    available: 0 bytes
+    available_bytes: 0
+    capacity: 100%
+    device: devpts
+    filesystem: devpts
+    options:
+    - rw
+    - seclabel
+    - nosuid
+    - noexec
+    - relatime
+    - gid=5
+    - mode=620
+    - ptmxmode=000
+    size: 0 bytes
+    size_bytes: 0
+    used: 0 bytes
+    used_bytes: 0
+  "/dev/shm":
+    available: 1.85 GiB
+    available_bytes: 1986727936
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+    - rw
+    - seclabel
+    - nosuid
+    - nodev
+    size: 1.85 GiB
+    size_bytes: 1986727936
+    used: 0 bytes
+    used_bytes: 0
+  "/run":
+    available: 1.68 GiB
+    available_bytes: 1803075584
+    capacity: 9.24%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+    - rw
+    - seclabel
+    - nosuid
+    - nodev
+    - mode=755
+    size: 1.85 GiB
+    size_bytes: 1986727936
+    used: 175.14 MiB
+    used_bytes: 183652352
+  "/run/user/0":
+    available: 378.94 MiB
+    available_bytes: 397348864
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+    - rw
+    - seclabel
+    - nosuid
+    - nodev
+    - relatime
+    - size=388036k
+    - mode=700
+    size: 378.94 MiB
+    size_bytes: 397348864
+    used: 0 bytes
+    used_bytes: 0
+  "/sys/fs/cgroup":
+    available: 1.85 GiB
+    available_bytes: 1986727936
+    capacity: 0%
+    device: tmpfs
+    filesystem: tmpfs
+    options:
+    - ro
+    - seclabel
+    - nosuid
+    - nodev
+    - noexec
+    - mode=755
+    size: 1.85 GiB
+    size_bytes: 1986727936
+    used: 0 bytes
+    used_bytes: 0
+  "/var":
+    available: 3.58 GiB
+    available_bytes: 3848273920
+    capacity: 10.18%
+    device: "/dev/mapper/VG01-VAR"
+    filesystem: xfs
+    options:
+    - rw
+    - seclabel
+    - relatime
+    - attr2
+    - inode64
+    - noquota
+    size: 3.99 GiB
+    size_bytes: 4284481536
+    used: 416.00 MiB
+    used_bytes: 436207616
+networking:
+  dhcp: 192.0.2.1
+  domain: example.com
+  fqdn: centos8.example.com
+  hostname: centos8
+  interfaces:
+    ens3:
+      bindings:
+      - address: 192.0.2.2
+        netmask: 255.255.255.0
+        network: 192.0.2.0
+      bindings6:
+      - address: 2001:db8::2
+        netmask: 'ffff:ffff:ffff:ffff::'
+        network: '2001:db8::'
+      - address: fe80::5054:ff:fe48:9b96
+        netmask: 'ffff:ffff:ffff:ffff::'
+        network: 'fe80::'
+      dhcp: 192.0.2.1
+      ip: 192.0.2.2
+      ip6: 2001:db8::1
+      mac: 52:54:00:48:9b:96
+      mtu: 1500
+      netmask: 255.255.255.0
+      netmask6: 'ffff:ffff:ffff:ffff::'
+      network: 192.0.2.0
+      network6: '2001:db8::'
+      scope6: global
+    lo:
+      bindings:
+      - address: 127.0.0.1
+        netmask: 255.0.0.0
+        network: 127.0.0.0
+      bindings6:
+      - address: "::1"
+        netmask: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+        network: "::1"
+      ip: 127.0.0.1
+      ip6: "::1"
+      mtu: 65536
+      netmask: 255.0.0.0
+      netmask6: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+      network: 127.0.0.0
+      network6: "::1"
+      scope6: host
+  ip: 192.0.2.2
+  ip6: 2001:db8::2
+  mac: 52:54:00:48:9b:96
+  mtu: 1500
+  netmask: 255.255.255.0
+  netmask6: 'ffff:ffff:ffff:ffff::'
+  network: 192.0.2.0
+  network6: '2001:db8::'
+  primary: ens3
+  scope6: global
+operatingsystem: CentOS
+operatingsystemmajrelease: '8'
+operatingsystemrelease: '8.1'
+os:
+  architecture: x86_64
+  family: RedHat
+  hardware: x86_64
+  name: CentOS
+  release:
+    full: 8.1.1911
+    major: '8'
+    minor: '1'
+  selinux:
+    config_mode: enforcing
+    config_policy: targeted
+    current_mode: enforcing
+    enabled: true
+    enforced: true
+    policy_version: '31'
+osfamily: RedHat
+package_provider: yum
+partitions:
+  "/dev/mapper/VG01-ROOT":
+    filesystem: xfs
+    mount: "/"
+    size: 4.00 GiB
+    size_bytes: 4294967296
+    uuid: 4df3cc28-82a5-46ac-98c1-b1a49ebc38ca
+  "/dev/mapper/VG01-VAR":
+    filesystem: xfs
+    mount: "/var"
+    size: 4.00 GiB
+    size_bytes: 4294967296
+    uuid: cc36b8af-24fd-4414-9b2d-f7b4b60ee15b
+  "/dev/mapper/luks-data":
+    filesystem: LVM2_member
+    size: 10.00 GiB
+    size_bytes: 10735321088
+    uuid: e0a07b0f-0bc1-4454-ae0e-8e7c3302fee9
+  "/dev/vda1":
+    filesystem: ext4
+    mount: "/boot"
+    size: 512.00 MiB
+    size_bytes: 536870912
+    uuid: fa6e063d-ae3b-41a4-96c0-ad1de90f77bc
+  "/dev/vda2":
+    filesystem: LVM2_member
+    size: 9.50 GiB
+    size_bytes: 10199498752
+    uuid: acdf74f8-16fa-4c9e-afdc-e52fb3a8f010
+path: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin:/sbin"
+processors:
+  count: 2
+  isa: x86_64
+  models:
+  - Intel(R) Atom(TM) CPU D2701   @ 2.13GHz
+  - Intel(R) Atom(TM) CPU D2701   @ 2.13GHz
+  physicalcount: 1
+puppet_config:
+  master:
+    localcacert: "/etc/puppetlabs/puppet/ssl/certs/ca.pem"
+    ssldir: "/etc/puppetlabs/puppet/ssl"
+  main:
+    hostpubkey: "/etc/puppetlabs/puppet/ssl/public_keys/boiler.example.com.pem"
+    hostprivkey: "/etc/puppetlabs/puppet/ssl/private_keys/boiler.example.com.pem"
+    hostcert: "/etc/puppetlabs/puppet/ssl/certs/boiler.example.com.pem"
+    localcacert: "/etc/puppetlabs/puppet/ssl/certs/ca.pem"
+    ssldir: "/etc/puppetlabs/puppet/ssl"
+    vardir: "/opt/puppetlabs/puppet/cache"
+    server: puppet.example.com
+puppet_environmentpath: "/etc/puppetlabs/code/environments"
+puppet_server: puppet.example.com
+puppet_vardir: "/opt/puppetlabs/puppet/cache"
+puppetversion: 6.12.0
+root_home: "/root"
+ruby:
+  platform: x86_64-linux
+  sitedir: "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0"
+  version: 2.5.7
+service_provider: systemd
+ssh:
+  ed25519:
+    fingerprints:
+      sha1: SSHFP 4 1 b264798673683c4367c3729f6632c9e2254a421e
+      sha256: SSHFP 4 2 6a57c9aab36737ebfbe4002d6f3001756f24d69a12e696c3c526977058931978
+    key: AAAAC3NzaC1lZDI1NTE5AAAAIBEK5BaNiSOtaKW4Ph7Q6YLuSNBZoATrOaO3jFIpUzhb
+    type: ssh-ed25519
+  rsa:
+    fingerprints:
+      sha1: SSHFP 1 1 955b71cb10cfad10e7d4bb2f5911f0e48ccd618b
+      sha256: SSHFP 1 2 9e821c0509860548c88e159da3aec0e8e55b51f5da7ee8a10d53a9578ee707c1
+    key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDA6JLqHwfoaH8ZvwHsPxdcKO8UktcVVT/6Jcna+WLwXzK6rWDuQ/Oqtl6qCLgeHeZxMzIqVEybDs4N2jvhKYX4k0DGx9nJTOIFn14fmYZTQ8tItRT3mBhOAoFNwyzN+ZakFx5B1PvEKn79MLlj8IcZyxBxhegZSUyK5hqY79K+Wv2znL0mD6KQdwLvruDQANDlGoCKgfKl0+gXYbCYgylM16zmogAm2G0fjrzWldmVSyRlulf3m1jN3jjjzWkuKCps6gEDSsJEtzteThtrzWkY0bcP/WNZilmfE5xUQTgO4S61+WSG1dWxHkdHar7Y6MKZQlwwbNyTUrZzLqyIyPy3
+    type: ssh-rsa
+ssh_version: OpenSSH_7.4p1
+ssh_version_numeric: '7.4'
+system_uptime:
+  days: 0
+  hours: 0
+  seconds: 280
+  uptime: 0:04 hours
+timezone: CET
+virtual: physical

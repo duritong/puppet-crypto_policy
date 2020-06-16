@@ -1,0 +1,26 @@
+# .gitignore
+#
+# MANAGED BY MODULESYNC
+# https://code.immerda.ch/netlab/puppet/modulesync.git
+
+pkg/
+Gemfile.lock
+Gemfile.local
+vendor/
+.vendor/
+spec/fixtures/manifests/
+spec/fixtures/modules/
+.vagrant/
+.bundle/
+.ruby-version
+coverage/
+log/
+.idea/
+.dependencies/
+.librarian/
+Puppetfile.lock
+*.iml
+.tmp/
+.*.sw?
+.yardoc/
+Guardfile

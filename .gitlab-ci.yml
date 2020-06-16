@@ -1,0 +1,33 @@
+---
+# -*- coding: utf-8 -*-
+
+image: ruby:2.6-buster
+
+stages:
+  - test
+
+.bundle: &bundle
+  before_script:
+    - echo -e "machine code.immerda.ch\nlogin gitlab-ci-token\npassword $CI_JOB_TOKEN" > ~/.netrc
+    - gem update --system
+    - gem update bundler
+    - bundle --version
+    - bundle install --jobs $(nproc)
+
+lint:
+  stage: test
+  tags:
+    - docker
+  <<: *bundle
+  script:
+    - bundle exec rake lint
+
+spec:
+  stage: test
+  tags:
+    - docker
+  <<: *bundle
+  script:
+    - bundle exec rake spec
+
+# vim: set ts=2 sw=2 :
