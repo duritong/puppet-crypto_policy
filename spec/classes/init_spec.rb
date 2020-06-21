@@ -10,6 +10,14 @@ describe 'crypto_policy', :type => 'class' do
     "
   end
 
+  describe 'CentOS 7 standard' do
+    let(:facts) {
+      Octofacts.from_file('centos7.example.com.yaml')
+    }
+
+    it { should compile.and_raise_error(/RedHat 7 is not supported/) }
+  end
+
   describe 'CentOS 8 standard' do
     let(:facts) {
       Octofacts.from_file('centos8.example.com.yaml')

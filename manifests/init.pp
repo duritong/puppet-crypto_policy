@@ -16,11 +16,15 @@ class crypto_policy (
   $level = 'default',
 ) {
 
-  if versioncmp($facts['os']['release']['major'],'8') >= 0 {
+  if ($facts['os']['family'] == 'RedHat' and
+      versioncmp($facts['os']['release']['major'],'8') >= 0) {
     $policy_level = $level.upcase()
     exec {'update-crypto-policies':
       command => "update-crypto-policies --set ${policy_level}",
       unless  => "update-crypto-policies --show | grep -q ^${policy_level}$",
     }
+
+  } else {
+    fail("${facts['os']['family']} ${facts['os']['release']['major']} is not supported.")
   }
 }
