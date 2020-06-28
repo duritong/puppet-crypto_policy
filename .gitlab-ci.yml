@@ -18,7 +18,6 @@ lint:
   stage: test
   tags:
     - container
-    - docker
   <<: *bundle
   script:
     - bundle exec rake lint
@@ -27,7 +26,6 @@ spec:
   stage: test
   tags:
     - container
-    - docker
   <<: *bundle
   script:
     - bundle exec rake spec
