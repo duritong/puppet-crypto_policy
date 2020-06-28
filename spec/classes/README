@@ -1,0 +1,2 @@
+This directory contains the rspec test classes.
+Each file should be named <CLASS>_spec.rb.

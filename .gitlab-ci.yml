@@ -17,6 +17,7 @@ stages:
 lint:
   stage: test
   tags:
+    - container
     - docker
   <<: *bundle
   script:
@@ -25,6 +26,7 @@ lint:
 spec:
   stage: test
   tags:
+    - container
     - docker
   <<: *bundle
   script:
