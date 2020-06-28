@@ -1,7 +1,7 @@
 ---
 # -*- coding: utf-8 -*-
 
-image: ruby:2.6-buster
+image: registry.code.immerda.ch/immerda/container-images/ruby:2.7
 
 stages:
   - test
@@ -9,7 +9,6 @@ stages:
 .bundle: &bundle
   before_script:
     - echo -e "machine code.immerda.ch\nlogin gitlab-ci-token\npassword $CI_JOB_TOKEN" > ~/.netrc
-    - gem update --system
     - gem update bundler
     - bundle --version
     - bundle install
