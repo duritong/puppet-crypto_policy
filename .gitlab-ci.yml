@@ -12,7 +12,7 @@ stages:
     - gem update --system
     - gem update bundler
     - bundle --version
-    - bundle install --jobs $(nproc)
+    - bundle install
 
 lint:
   stage: test
