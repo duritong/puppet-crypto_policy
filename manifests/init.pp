@@ -19,9 +19,15 @@ class crypto_policy (
   if ($facts['os']['family'] == 'RedHat' and
       versioncmp($facts['os']['release']['major'],'8') >= 0) {
     $policy_level = $level.upcase()
+
+    package{'crypto-policies':
+      ensure => present,
+    }
+
     exec {'update-crypto-policies':
       command => "update-crypto-policies --set ${policy_level}",
       unless  => "update-crypto-policies --show | grep -q ^${policy_level}$",
+      require => [Package['crypto-policies']],
     }
 
   } else {

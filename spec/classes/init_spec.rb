@@ -25,6 +25,10 @@ describe 'crypto_policy', :type => 'class' do
 
     it { should compile.with_all_deps }
 
+    it { should contain_package('crypto-policies').with(
+      :ensure => 'present',
+    )}
+
     it { should contain_exec('update-crypto-policies').with(
       :command => 'update-crypto-policies --set DEFAULT',
       :unless  => 'update-crypto-policies --show | grep -q ^DEFAULT$',
