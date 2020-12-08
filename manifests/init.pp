@@ -20,14 +20,11 @@ class crypto_policy (
       versioncmp($facts['os']['release']['major'],'8') >= 0) {
     $policy_level = $level.upcase()
 
-    package{'crypto-policies':
+    package{['crypto-policies','crypto-policies-scripts']:
       ensure => present,
-    }
-
-    exec {'update-crypto-policies':
+    } -> exec {'update-crypto-policies':
       command => "update-crypto-policies --set ${policy_level}",
       unless  => "update-crypto-policies --show | grep -q ^${policy_level}$",
-      require => [Package['crypto-policies']],
     }
 
   } else {
