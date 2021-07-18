@@ -22,6 +22,11 @@ class crypto_policy (
 
     package{['crypto-policies','crypto-policies-scripts']:
       ensure => present,
+    } -> file {'/usr/share/crypto-policies/policies/modules/TLS1.pmod':
+      content => 'protocol@TLS = +TLS1.1 +TLS1.0 +DTLS1.0',
+      owner   => root,
+      group   => root,
+      mode    => '0444';
     } -> exec {'update-crypto-policies':
       command => "update-crypto-policies --set ${policy_level}",
       unless  => "update-crypto-policies --show | grep -q ^${policy_level}$",
