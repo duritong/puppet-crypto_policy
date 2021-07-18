@@ -15,23 +15,21 @@
 class crypto_policy (
   $level = 'default',
 ) {
-
   if ($facts['os']['family'] == 'RedHat' and
-      versioncmp($facts['os']['release']['major'],'8') >= 0) {
+  versioncmp($facts['os']['release']['major'],'8') >= 0) {
     $policy_level = $level.upcase()
 
-    package{['crypto-policies','crypto-policies-scripts']:
+    package { ['crypto-policies','crypto-policies-scripts']:
       ensure => present,
-    } -> file {'/etc/crypto-policies/policies/modules/TLS1.pmod':
+    } -> file { '/etc/crypto-policies/policies/modules/TLS1.pmod':
       content => 'protocol@TLS = +TLS1.1 +TLS1.0 +DTLS1.0',
       owner   => root,
       group   => root,
       mode    => '0444';
-    } ~> exec {'update-crypto-policies':
+    } ~> exec { 'update-crypto-policies':
       command => "update-crypto-policies --set ${policy_level}",
       unless  => "update-crypto-policies --show | grep -q ^${policy_level}$",
     }
-
   } else {
     fail("${facts['os']['family']} ${facts['os']['release']['major']} is not supported.")
   }
